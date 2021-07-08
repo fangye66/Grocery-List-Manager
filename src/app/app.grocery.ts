@@ -10,4 +10,11 @@ import { Component } from '@angular/core';
 })
 
 export class GroceryComponent {
+  task!: string;
+  tasks: {name: string, strike : boolean}[] = [];
+
+  onClick(){
+  	this.tasks.push({name: this.task, strike: false});
+  	this.task = '';
+  }
 }
